@@ -5,7 +5,7 @@ public class Carta {
 	private String faces; 
 	private String nipe;
 	private int valor;
- private int peso;
+ 	private int peso;
 
 	
 
@@ -40,13 +40,13 @@ public class Carta {
 		this.valor = valor;
 	}
 
- public int getPeso(){
-  return peso;
- }
+	 public int getPeso(){
+	  return peso;
+	 }
 
- public void setPeso(int peso){
- this.peso = peso;
- }
+	 public void setPeso(int peso){
+	 this.peso = peso;
+	 }
 
 	@Override
 	public String toString() {
