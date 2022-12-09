@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 /bin/
 /.classpath
 /.project
+=======
+/target/
+>>>>>>> dev

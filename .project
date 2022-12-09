@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>Desafio_Proj_DevOps_Bisca</name>
+=======
+	<name>Ptojeto_Bisca_unisales</name>
+>>>>>>> dev
 	<comment></comment>
 	<projects>
 	</projects>
@@ -10,8 +14,20 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+<<<<<<< HEAD
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+>>>>>>> dev
 	</natures>
 </projectDescription>
