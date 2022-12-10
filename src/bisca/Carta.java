@@ -5,11 +5,7 @@ public class Carta {
 	private String faces; 
 	private String nipe;
 	private int valor;
-<<<<<<< HEAD
 	private int peso;
-=======
- 	private int peso;
->>>>>>> dev
 
 	
 
@@ -53,13 +49,7 @@ public class Carta {
 		this.peso = peso;
 	}
 
-	 public int getPeso(){
-	  return peso;
-	 }
-
-	 public void setPeso(int peso){
-	 this.peso = peso;
-	 }
+	
 
 	@Override
 	public String toString() {
