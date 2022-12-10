@@ -6,6 +6,8 @@ import java.util.List;
 public class Baralho {
 
 	private List<Carta> cartas = new ArrayList<>();
+	
+	//Criando baralho //
 
 	public Baralho() {
 		String[] faces = { "As", "2", "3", "4", "5", "6", "7", "Q", "J", "K" };

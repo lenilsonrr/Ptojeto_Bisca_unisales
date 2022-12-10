@@ -49,11 +49,8 @@ public class Partida {
 	
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		for (Carta c : cartas) {
-			sb.append(c);
-		}
-		return sb.toString();
+		
+		return jogador1+" carta nipe: "+cartaNipe+" nipe: "+cartaNipe.getNipe()+jogador2+"carta nipe: "+cartaNipe+"nipe: "+cartaNipe.getNipe();
 }
 	
 }
