@@ -16,6 +16,7 @@ public class Programa {
 		//testando baralho//
 		Baralho baralho1 = new Baralho();
 		System.out.println("___________teste___________");
+		 baralho1.embaralhar();
 		System.out.println(baralho1);
 		
 		//testando Jogador//
