@@ -80,3 +80,17 @@ public class Partida {
 	}
 
 }
+
+ public void trocandoDoisPorTrunfoMaior() {
+	for (int i = 0; i < jogador1.getCartasJogador().size(); i++) {
+		if (jogador1.getCartasJogador().get(i).getFaces().equals("2")
+				&& jogador1.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
+			jogador1.getCartasJogador().set(i, cartaNipe);
+		}
+		if (jogador2.getCartasJogador().get(i).getFaces().equals("2")
+				&& jogador2.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
+			jogador2.getCartasJogador().set(i, cartaNipe);
+		}
+	}
+
+}
