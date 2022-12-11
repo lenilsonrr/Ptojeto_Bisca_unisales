@@ -11,6 +11,7 @@ public class Programa {
 
 
 		// testando partida//
+		
 		Partida partidaTeste = new Partida(new Baralho());
 		partidaTeste.getBaralho().embaralhar();
 		partidaTeste.nipeDoJogo();
