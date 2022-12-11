@@ -12,7 +12,7 @@ tools {
         }
         stage('Build') {
             steps {
-                dir("D:/Faculdade/4periodo/GerConfig/Projeto") {
+                dir("C:/Users/LENILSON PC/OneDrive/Documentos/Desafio-James/Ptojeto_Bisca_unisales") {
                 bat 'mvn -B -DskipTests clean package'
                 }
             }
