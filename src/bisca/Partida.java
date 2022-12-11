@@ -1,18 +1,16 @@
 package bisca;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-
-
 
 public class Partida {
 
-	
 	private Baralho baralho;
 	private Carta cartaNipe;
 	private Jogador jogador1;
 	private Jogador jogador2;
-	
-	
+
 	private Scanner sc = new Scanner(System.in);
 
 	public Partida(Baralho baralho) {
@@ -46,11 +44,39 @@ public class Partida {
 	public void setCartaNipe(Carta cartaNipe) {
 		this.cartaNipe = cartaNipe;
 	}
+
+	// Adicinonando jogadores//
+
+	public void addJogadores() {
+		jogador1 = new Jogador("jog1", 0, cartasJogadores());
+		jogador2 = new Jogador("jog2", 0, cartasJogadores());
+		jogador1.setVez("vez");
+		jogador2.setVez(null);
+	}
+
+	//adicionando cartas ao jogadores//
 	
+	public List<Carta> cartasJogadores() {
+		List<Carta> cartasJogador = new ArrayList<>();
+
+		for (int i = 0; i < 3; i++) {
+			cartasJogador.add(baralho.comprarUmaCarta());
+		}
+		return cartasJogador;
+	}
+	
+	public void nipeDoJogo() {
+		Carta c_trunfo = baralho.cartaParaTrunfo();
+		setCartaNipe(c_trunfo);
+	}
+	
+	
+
 	@Override
 	public String toString() {
-		
-		return jogador1+" carta nipe: "+cartaNipe+" nipe: "+cartaNipe.getNipe()+jogador2+"carta nipe: "+cartaNipe+"nipe: "+cartaNipe.getNipe();
-}
-	
+
+		return jogador1 + " carta nipe: " + cartaNipe + " nipe: " + cartaNipe.getNipe() + jogador2 + "carta nipe: "
+				+ cartaNipe + "nipe: " + cartaNipe.getNipe();
+	}
+
 }

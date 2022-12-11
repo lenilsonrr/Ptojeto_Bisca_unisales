@@ -7,6 +7,7 @@ public class Jogador {
 	private String nome;
 	private Integer pontos;
 	private List<Carta> cartasJogador;
+	private String Vez;
 	
 	
 	public Jogador(String nome, int pontos,List<Carta> cartas) {
@@ -45,6 +46,17 @@ public class Jogador {
 		this.cartasJogador = new ArrayList<>();
 	}
 	
+	
+	public String getVez() {
+		return Vez;
+	}
+
+
+	public void setVez(String vez) {
+		Vez = vez;
+	}
+
+
 	public void somarPontos(int pontos) {
 		this.pontos += pontos;
 	}
