@@ -13,7 +13,7 @@ public class Programa {
 		// testando partida//
 		Partida partidaTeste = new Partida(new Baralho());
 		partidaTeste.getBaralho().embaralhar();
-		partidaTeste.getCartaNipe();
+		partidaTeste.nipeDoJogo();
 		partidaTeste.addJogadores();
 		System.out.println(partidaTeste);
 
