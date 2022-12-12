@@ -48,14 +48,14 @@ public class Partida {
 	// Adicinonando jogadores//
 
 	public void addJogadores() {
-		jogador1 = new Jogador("jog1", 0, cartasJogadores());
-		jogador2 = new Jogador("jog2", 0, cartasJogadores());
-		jogador1.setVez("vez");
+		jogador1 = new Jogador("Jogador 1", 0, cartasJogadores());
+		jogador2 = new Jogador("Jogador 2", 0, cartasJogadores());
+		jogador1.setVez("Vez");
 		jogador2.setVez(null);
 	}
 
-	//adicionando cartas ao jogadores//
-	
+	// adicionando cartas ao jogadores//
+
 	public List<Carta> cartasJogadores() {
 		List<Carta> cartasJogador = new ArrayList<>();
 
@@ -64,54 +64,52 @@ public class Partida {
 		}
 		return cartasJogador;
 	}
-	
+
 	public void nipeDoJogo() {
 		Carta c_trunfo = baralho.cartaParaTrunfo();
 		setCartaNipe(c_trunfo);
 	}
-	
-	
 
 	@Override
 	public String toString() {
 
-		return jogador1 + " carta nipe: " + cartaNipe + " nipe: " + cartaNipe.getNipe() + jogador2 + "carta nipe: "
-				+ cartaNipe + "nipe: " + cartaNipe.getNipe();
+		return jogador1 + " carta naipe: " + cartaNipe + " naipe: " + cartaNipe.getNipe()
+				+ "\n--------------------------------------\n" + jogador2 + "carta naipe: " + cartaNipe + "naipe: "
+				+ cartaNipe.getNipe() + "\n--------------------------------------\n";
 	}
 
-}
+	public void trocandoDoisPorTrunfoMaior() {
+		for (int i = 0; i < jogador1.getCartasJogador().size(); i++) {
+			if (jogador1.getCartasJogador().get(i).getFaces().equals("2")
+					&& jogador1.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
+				jogador1.getCartasJogador().set(i, cartaNipe);
+			}
+			if (jogador2.getCartasJogador().get(i).getFaces().equals("2")
+					&& jogador2.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
+				jogador2.getCartasJogador().set(i, cartaNipe);
+			}
+		}
 
- public void trocandoDoisPorTrunfoMaior() {
-	for (int i = 0; i < jogador1.getCartasJogador().size(); i++) {
-		if (jogador1.getCartasJogador().get(i).getFaces().equals("2")
-				&& jogador1.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
-			jogador1.getCartasJogador().set(i, cartaNipe);
-		}
-		if (jogador2.getCartasJogador().get(i).getFaces().equals("2")
-				&& jogador2.getCartasJogador().get(i).getNipe().equals(cartaNipe.getNipe())) {
-			jogador2.getCartasJogador().set(i, cartaNipe);
-		}
 	}
 
-}
- 
- public void regraMesmoNipeSemSerTrunfo(Jogador j1, int n1, Jogador j2, int n2) {
+	public void regraMesmoNipeSemSerTrunfo(Jogador j1, int n1, Jogador j2, int n2) {
 
 		if (j1.getCartasJogador().get(n1).getNipe().equals(j2.getCartasJogador().get(n2).getNipe())
 				&& j1.getCartasJogador().get(n1).getNipe() != cartaNipe.getNipe()
 				&& j2.getCartasJogador().get(n2).getNipe() != cartaNipe.getNipe()) {
 			if (j1.getCartasJogador().get(n1).getPeso() > j2.getCartasJogador().get(n2).getPeso()) {
 				j1.somarPontos(j1.getCartasJogador().get(n1).getValor() + j2.getCartasJogador().get(n2).getValor());
-				System.out.println("Vitoria jog1 agora e sua vez @@@@@ cartas mesmo nipe sem ser trunfo\n");
+				System.out.println("Vitoria jogador 1 agora é sua vez @@@@@ cartas mesmo nipe sem ser trunfo\n");
 				j1.setVez("vez");
 				j2.setVez(null);
 
 			} else {
 				j2.somarPontos(j1.getCartasJogador().get(n1).getValor() + j2.getCartasJogador().get(n2).getValor());
-				System.out.println("Vitoria jog2 agora e sua vez @@@@@ cartas mesmo nipe sem ser trunfo\n");
+				System.out.println("Vitoria jogador 2 agora é sua vez @@@@@ cartas mesmo nipe sem ser trunfo\n");
 				j2.setVez("vez");
 				j1.setVez(null);
 			}
 		}
 
 	}
+}

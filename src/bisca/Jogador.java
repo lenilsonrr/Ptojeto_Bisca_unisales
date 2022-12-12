@@ -69,7 +69,7 @@ public class Jogador {
 			cont++;
 			sb.append("("+cont+")  "+c);
 		}
-		return nome +", pontos: "+ pontos + "\n\n Nª  Suas cartas \n\n" + sb.toString();
+		return "\n" + nome +", pontos: "+ pontos + "\n\n Nª  Suas cartas \n\n" + sb.toString();
 	}
 
 }
