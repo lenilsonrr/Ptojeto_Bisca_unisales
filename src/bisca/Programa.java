@@ -16,7 +16,8 @@ public class Programa {
 		partidaTeste.getBaralho().embaralhar();
 		partidaTeste.nipeDoJogo();
 		partidaTeste.addJogadores();
-		System.out.println(partidaTeste);
+		partidaTeste.trocandoDoisPorTrunfoMaior();
+		partidaTeste.rodadas();
 
 	}
 }

@@ -9,7 +9,7 @@ public class Baralho {
 
 	private List<Carta> cartas = new ArrayList<>();
 
-	// Criando baralho //
+	private Random rand = new Random();
 
 	public Baralho() {
 		String[] faces = { "As", "2", "3", "4", "5", "6", "7", "Q", "J", "K" };
@@ -18,6 +18,8 @@ public class Baralho {
 			this.cartas.add(new Carta(faces[i], "Espadas", 0));
 			this.cartas.add(new Carta(faces[i], "Ouros", 0));
 			this.cartas.add(new Carta(faces[i], "Paus", 0));
+
+			adicionadoValorAsCartas();
 		}
 	}
 
@@ -34,7 +36,6 @@ public class Baralho {
 			if (getCartas().get(i).getFaces() == ("As")) {
 				getCartas().get(i).setValor(11);
 				getCartas().get(i).setPeso(10);
-				;
 			}
 			if (getCartas().get(i).getFaces() == "7") {
 				getCartas().get(i).setValor(10);
@@ -74,8 +75,6 @@ public class Baralho {
 		Collections.shuffle(cartas);
 	}
 
-	private Random rand = new Random();
-
 	public Carta cartaParaTrunfo() {
 		int index = rand.nextInt(cartas.size() - 1);
 		Carta cartaTrunfo = cartas.get(index);
@@ -98,6 +97,7 @@ public class Baralho {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
+
 		for (Carta c : cartas) {
 			sb.append(c);
 		}

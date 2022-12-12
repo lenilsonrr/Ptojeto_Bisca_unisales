@@ -2,15 +2,12 @@ package bisca;
 
 public class Carta {
 
-	private String faces; 
+	private String faces;
 	private String nipe;
 	private int valor;
- 	private int peso;
+	private int peso;
 
-	
-
-
-	public Carta(String faces, String nipe,int valor) {
+	public Carta(String faces, String nipe, int valor) {
 		this.faces = faces;
 		this.nipe = nipe;
 		this.valor = valor;
@@ -40,16 +37,16 @@ public class Carta {
 		this.valor = valor;
 	}
 
-	 public int getPeso(){
-	  return peso;
-	 }
+	public int GetPeso() {
+		return peso;
+	}
 
-	 public void setPeso(int peso){
-	 this.peso = peso;
-	 }
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
 
 	@Override
 	public String toString() {
-		return faces + " de " + nipe +"\n";
+		return faces + " de " + nipe + "\n";
 	}
 }
