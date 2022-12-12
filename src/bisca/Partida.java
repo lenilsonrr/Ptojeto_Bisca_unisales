@@ -112,4 +112,24 @@ public class Partida {
 		}
 
 	}
+
+	public void regraCartaTrunfoEOutraNaoTrunfo(Jogador j1, int n1, Jogador j2, int n2) {
+		if (j1.getCartasJogador().get(n1).getNipe().equals(cartaNipe.getNipe())
+				&& j2.getCartasJogador().get(n2).getNipe() != cartaNipe.getNipe()) {
+
+			j1.somarPontos(j1.getCartasJogador().get(n1).getValor() + j2.getCartasJogador().get(n2).getValor());
+			System.out.println("Vitoria jog1 agora e sua vez *** Cartas trunfo e outro nao\n");
+			j1.setVez("vez");
+			j2.setVez(null);
+
+		}
+		if (j2.getCartasJogador().get(n2).getNipe().equals(cartaNipe.getNipe())
+				&& j1.getCartasJogador().get(n1).getNipe() != cartaNipe.getNipe()) {
+			j2.somarPontos(j1.getCartasJogador().get(n1).getValor() + j2.getCartasJogador().get(n2).getValor());
+			System.out.println("Vitoria jog2 agora e sua vez **** Cartas trunfo e outro nao\n");
+			j2.setVez("vez");
+			j1.setVez(null);
+		}
+
+	}
 }
