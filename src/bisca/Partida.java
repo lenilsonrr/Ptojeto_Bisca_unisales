@@ -150,3 +150,16 @@ public class Partida {
 		}
 	}
 }
+public void regraCartasNipesDiferenteS(Jogador j1, int n1, Jogador j2, int n2) {
+
+	if (j1.getCartasJogador().get(n1).getNipe() != j2.getCartasJogador().get(n2).getNipe()
+			&& j1.getCartasJogador().get(n1).getNipe() != cartaNipe.getNipe()
+			&& j2.getCartasJogador().get(n2).getNipe() != cartaNipe.getNipe()
+			&& j2.getCartasJogador().get(n2).getNipe() != cartaNipe.getNipe()) {
+		j1.somarPontos(j1.getCartasJogador().get(n1).getValor() + j2.getCartasJogador().get(n2).getValor());
+		System.out.println("Vitoria continua a sua vez  ######## Cartas nipes diferentes\n");
+		j1.setVez("vez");
+		j2.setVez(null);
+	}
+
+}
