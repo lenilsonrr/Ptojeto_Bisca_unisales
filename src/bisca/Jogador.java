@@ -60,7 +60,7 @@ public class Jogador {
 			cont++;
 			sb.append("(" + cont + ")  " + c);
 		}
-		return nome +"\n\n Nª  Suas cartas \n\n" + sb.toString();
+		return nome +"\n\n N°  Suas cartas \n\n" + sb.toString();
 	}
 
 }
